@@ -291,6 +291,46 @@ menu {
   cursor: pointer;
   margin-top: 10px;
 }
+.payment-btn {
+  width: 100%;
+  background: #4CAF50;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+.confirm-btn{
+  width: 100%;
+  background: #4CAF50;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+.payment-btn:hover{
+  width: 100%;
+  background: #84c486;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+.confirm-btn:hover{
+  width: 100%;
+  background: #84c486;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+}
 
 #confirm-order:hover{
     background-color: #84c486;
