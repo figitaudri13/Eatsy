@@ -11,14 +11,14 @@ const orders = [
         ],
         status: 'processing' // Status pesanan
     },
-    {
+   {
         id: 2,
         customerName: 'Jane Smith',
         tableNumber: '5',
         totalPrice: 150000,
         menuItems: [
-            { name: 'Sate Ayam', price: 70000, image: 'sate-ayam.jpg' },
-            { name: 'Es Teh', price: 20000, image: 'es-teh.jpg' }
+            { name: 'Pizza', price: 70000, },
+            { name: 'Cold Coffe', price: 20000, }
         ],
         status: 'completed' // Status pesanan
     }
@@ -39,7 +39,7 @@ function displayOrders() {
     orderList.innerHTML = ''; // Clear daftar pesanan
 
     orders.forEach(order => {
-        // Pastikan totalPrice dihitung ulang
+        // Jumlah Harga
         order.totalPrice = calculateTotalPrice(order.menuItems);
 
         const orderTable = document.createElement('table');
@@ -97,7 +97,7 @@ function viewOrderDetail(orderId) {
     const order = orders.find(o => o.id === orderId);
 
     if (order) {
-        // Hitung ulang totalPrice jika diperlukan
+        // Hitung ulang totalPrice
         order.totalPrice = calculateTotalPrice(order.menuItems);
 
         const orderDetail = document.getElementById('order-detail');
@@ -133,7 +133,7 @@ function printReceipt() {
     const order = orders.find(o => o.id === orderId);
 
     if (order) {
-        // Hitung ulang totalPrice jika diperlukan
+        // Hitung ulang totalPrice 
         order.totalPrice = calculateTotalPrice(order.menuItems);
 
         let receiptHTML = `
