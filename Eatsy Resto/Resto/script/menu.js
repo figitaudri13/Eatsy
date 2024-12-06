@@ -3,7 +3,7 @@
 // Array untuk menyimpan data menu
 const menuItems = [];
 
-// Simpan data menu ke Local Storage
+// Menyimpan data menu ke Local Storage
 function saveToLocalStorage() {
     localStorage.setItem('menuItems', JSON.stringify(menuItems));
 }
@@ -28,7 +28,7 @@ function displayMenu() {
         menuTable.appendChild(row);
     });
 
-    saveToLocalStorage(); // Simpan data ke Local Storage setiap kali ada perubahan
+    saveToLocalStorage(); // Menyimpan data ke Local Storage setiap kali ada perubahan
 }
 
 
@@ -37,7 +37,7 @@ function displayMenu() {
     }
 
 
-// Tambah menu baru
+// Menambah menu baru
 document.getElementById('menu-form').addEventListener('submit', function (e) {
     e.preventDefault();
 
@@ -50,14 +50,14 @@ document.getElementById('menu-form').addEventListener('submit', function (e) {
         reader.onload = function (event) {
             const imageURL = event.target.result;
 
-            // Tambahkan data menu baru ke array
+            // Menambahkan data menu baru ke array
             menuItems.push({
                 name,
                 price,
                 image: imageURL
             });
 
-            displayMenu(); // Perbarui tampilan menu
+            displayMenu(); // Memperbarui tampilan menu
             document.getElementById('menu-form').reset(); // Reset form setelah submit
         };
 
@@ -68,7 +68,7 @@ document.getElementById('menu-form').addEventListener('submit', function (e) {
 // Hapus menu
 function deleteMenu(index) {
     if (confirm('Apakah Anda yakin ingin menghapus menu ini?')) {
-        menuItems.splice(index, 1); // Hapus item dari array
+        menuItems.splice(index, 1); // Menghapus item dari array
         displayMenu(); // Perbarui tampilan
     }
 }
