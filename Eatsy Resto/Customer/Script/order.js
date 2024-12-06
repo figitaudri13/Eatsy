@@ -14,23 +14,23 @@ document.addEventListener('DOMContentLoaded', function() {
       const orderData = {
         items: getSelectedItems(),  // Fungsi untuk mendapatkan item yang dipesan
         total: calculateTotal(),    // Fungsi untuk menghitung total harga
-        table_id: tableID           // Tambahkan table_id
+        table_id: tableID          
       };
   
-      // Simpan pesanan di localStorage (opsional)
+      // Simpan pesanan di localStorage
       localStorage.setItem('order', JSON.stringify(orderData));
       console.log('Pesanan disimpan:', orderData);
     });
   });
   
-  // Contoh fungsi dummy (sesuaikan dengan kebutuhan kamu)
+  // Contoh fungsi dummy (sesuaikan dengan kebutuhan)
   function getSelectedItems() {
     // Mendapatkan item pesanan (sesuaikan)
     return ["Item 1", "Item 2"];
   }
   
   function calculateTotal() {
-    // Menghitung total pesanan (sesuaikan)
+    // Menghitung total pesanan
     return 50000;
   }
   
