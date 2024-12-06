@@ -1,18 +1,18 @@
 
-// Ambil data menu dari Local Storage
+// Mengambil data menu dari Local Storage
 let menuItems = JSON.parse(localStorage.getItem('menuItems')) || [];
 
-// Ambil parameter ID dari URL
+// Mengambil parameter ID dari URL
 const urlParams = new URLSearchParams(window.location.search);
 const menuId = urlParams.get('id');
 
-// Ambil elemen form
+// Mengambil elemen form
 const form = document.getElementById('edit-menu-form');
 const nameInput = document.getElementById('edit-menu-name');
 const priceInput = document.getElementById('edit-menu-price');
 const imageInput = document.getElementById('edit-menu-image');
 
-// Pre-fill form dengan data menu yang dipilih
+//form dengan data menu yang dipilih
 const menuToEdit = menuItems[menuId];
 nameInput.value = menuToEdit.name;
 priceInput.value = menuToEdit.price;
