@@ -74,7 +74,7 @@ function filterMenu(searchTerm) {
     });
 }
 
-// Tambahkan event listener pada search bar untuk memfilter menu
+// Menambahkan event listener pada search bar untuk memfilter menu
 document.querySelector('.search-bar').addEventListener('input', (e) => {
     const searchTerm = e.target.value;
     filterMenu(searchTerm);
@@ -147,12 +147,12 @@ document.getElementById("confirm-order").addEventListener("click", () => {
 
         
 
-        // Simpan data pesanan dan nomor meja ke localStorage
+        // Menyimpan data pesanan dan nomor meja ke localStorage
         localStorage.setItem("orders", JSON.stringify(orders));
         localStorage.setItem("totalPrice", totalPrice);
         localStorage.setItem("tableNumber", tableNumber);
         
-        // Arahkan ke halaman pembayaran
+        // Mengarahkan ke halaman pembayaran
         window.location.href = "payment.html"; // Menuju File Pembayaran
     } else {
         alert("No items in order.");
