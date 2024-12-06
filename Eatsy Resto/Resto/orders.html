@@ -1,0 +1,49 @@
+<!---->
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restoran Pemesanan</title>
+    <link rel="stylesheet" href="style/order-manajemen.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Daftar Pesanan Restoran</h1>
+    </header>
+
+    <!-- Daftar Pesanan -->
+    <div class="order-container" id="order-list">
+        <!-- Pesanan akan ditampilkan per tabel di sini -->
+
+        <table id="order-table">
+            <thead>
+                <tr>
+                    <th>No Pesanan</th>
+                    <th>Nama Pemesan</th>
+                    <th>Meja</th>
+                    <th>Status Pesanan</th>
+                    <th>Aksi</th>
+                </tr>
+            </thead>
+            <tbody id="order-list">
+                <!-- Data akan diisi di JavaScript -->
+            </tbody>
+        </table>
+    </div>
+
+    <div id="orderDetailModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <div id="order-detail"></div>
+            <button onclick="printReceipt()">Cetak Bon Pesanan</button>
+        </div>
+    </div>
+
+    <script src="script/orders.js"></script>
+</body>
+</html>
+
+
