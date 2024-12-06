@@ -50,6 +50,6 @@ document.querySelectorAll(".payment-btn").forEach((btn) => {
 
 document.querySelectorAll(".confirm-btn").forEach((btn) => {
     btn.addEventListener("click", () => {
-        clearOrders(); // Bersihkan pesanan setelah konfirmasi pembayaran
+        clearOrders();
     });
 });
