@@ -36,14 +36,14 @@ function clearOrders() {
     localStorage.removeItem("orders");
     localStorage.removeItem("totalPrice");
     localStorage.removeItem("tableNumber");
-    alert("Order and payment confirmed!");
+    alert("Pesanan dan Pembayaran Terkonfirmasi");
     window.location.href = "index.html"; // Kembali ke halaman utama setelah pembayaran
 }
 
 // Event Listener untuk tombol konfirmasi pembayaran dan QRIS
 document.querySelectorAll(".payment-btn").forEach((btn) => {
     btn.addEventListener("click", () => {
-        alert("Payment via QRIS initiated!");
+        alert("Pembayaran via QRIS Terkonfirmasi");
         clearOrders(); // Bersihkan pesanan setelah pembayaran QRIS berhasil
     });
 });
